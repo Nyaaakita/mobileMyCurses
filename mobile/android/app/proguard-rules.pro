@@ -1,0 +1,2 @@
+-keep class io.flutter.plugins.** { *; }
+-keep class com.builttoroam.devicecalendar.** { *; }

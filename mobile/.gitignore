@@ -1,0 +1,71 @@
+# См. также android/.gitignore — настройки Gradle/ключи.
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+*~
+
+# Dart / Pub
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+.fvm/
+.melos_tool/
+**/doc/api/
+
+# Сборка и тесты
+/build/
+/coverage/
+.test_coverage.dart
+
+# Flutter tool
+.metadata
+.flutter-versions
+
+# iOS (если появится)
+**/ios/Flutter/.last_build_id
+**/ios/Flutter/Flutter.framework
+**/ios/Flutter/Flutter.podspec
+**/ios/.symlinks/
+**/ios/Pods/
+**/ios/**/xcuserdata/
+
+# macOS
+**/macos/Flutter/GeneratedPluginRegistrant.swift
+**/macos/Flutter/ephemeral/
+**/macos/Pods/
+
+# Windows
+**/windows/flutter/ephemeral/
+**/windows/flutter/generated_plugin_registrant.cc
+
+# Linux
+**/linux/flutter/ephemeral/
+**/linux/flutter/generated_plugin_registrant.cc
+
+# Символы / обфускация (карты лучше не коммитить)
+app.*.symbols
+app.*.map.json
+**/*.symbols
+
+# IDE
+*.iml
+*.ipr
+*.iws
+.idea/
+.history
+.atom/
+.buildlog/
+.swiftpm/
+migrate_working_dir/
+
+# Android Studio: типичные build-артефакты под app/
+/android/app/debug/
+/android/app/profile/
+/android/app/release/

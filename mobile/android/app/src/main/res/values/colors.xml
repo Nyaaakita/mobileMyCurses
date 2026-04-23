@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="splash_background">#FFF2F7FA</color>
+    <!-- Фон adaptive icon (как в flutter_launcher_icons / pubspec adaptive_icon_background) -->
+    <color name="ic_launcher_background">#D6D9DE</color>
+</resources>
