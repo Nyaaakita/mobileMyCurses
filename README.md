@@ -31,11 +31,14 @@ Monorepo with:
 - По умолчанию API слушает `:8080`.
 - Для прод-режима задайте безопасный `JWT_SECRET`.
 
-### Mobile (Android emulator vs phone)
+### Mobile (Android / iOS)
 
-- Эмулятор Android: используйте `http://10.0.2.2:8080` (дефолт).
-- Физический телефон: используйте IP компьютера в Wi-Fi сети:
+- **Android-эмулятор:** по умолчанию `http://10.0.2.2:8080`.
+- **iOS Simulator (macOS):** по умолчанию `http://127.0.0.1:8080` (API на той же машине).
+- **Физическое устройство (Android или iPhone):** IP компьютера в Wi-Fi:
   - `flutter run --dart-define=API_BASE_URL=http://192.168.x.x:8080`
+
+Сборка под iOS выполняется на **macOS** с установленным Xcode: в каталоге `mobile/` — `cd ios && pod install` (при первом запуске или после смены плагинов), затем `flutter run` или открыть `ios/Runner.xcworkspace` в Xcode.
 
 ### Demo account
 
@@ -45,8 +48,8 @@ Monorepo with:
 ## Troubleshooting
 
 - **`No supported devices connected`**
-  - Убедитесь, что в `mobile/` существует папка `android/`.
-  - При необходимости: `flutter create . --platforms=android`.
+  - Android: в `mobile/` должна быть папка `android/`. При необходимости: `flutter create . --platforms=android`.
+  - iOS: в `mobile/` должна быть папка `ios/`, устройство или Simulator, сборка с Mac + Xcode.
 
 - **Приложение не логинится на физическом телефоне**
   - Проверьте `API_BASE_URL` (IP ПК, а не `10.0.2.2`).
